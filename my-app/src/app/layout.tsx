@@ -4,10 +4,11 @@ import {cn} from "@/lib/utils";
 import {className} from "postcss-selector-parser";
 import "../styles/globals.css";
 import Navbar from "@/components/UI/Navbar";
+import {Toaster} from "@/components/UI/toaster";
 
 export const metadata = {
     title: 'Forum',
-    description: 'A Reddit clone built with Next.js and TypeScript.',
+    description: 'Forum',
 }
 
 const inter = Inter({subsets: ['latin']})
@@ -25,6 +26,8 @@ export default function RootLayout({
                 <div className='container max-w-7xl mx-auto h-full pt-12'>
                     {children}
                 </div>
+
+            <Toaster />
             </body>
         </html>
     );
